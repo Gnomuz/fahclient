@@ -1,7 +1,6 @@
 <config>
-  <!-- Client Control 
-       Don't fold anonymously, provide user info. -->
-  <fold-anon v='false'/>
+  <!-- Client Control -->
+  <fold-anon v='true'/>
 
   <!-- Folding Slot Configuration -->
   <cause v='COVID_19'/>
