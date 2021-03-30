@@ -1,0 +1,35 @@
+<config>
+  <!-- Client Control 
+       Don't fold anonymously, provide user info. -->
+  <fold-anon v='false'/>
+
+  <!-- Folding Slot Configuration -->
+  <cause v='COVID_19'/>
+  <client-type v='advanced'/>
+  <gpu v='true'/>  <!-- If true, attempt to autoconfigure GPUs -->
+
+  <!-- HTTP Server -->
+  <allow v='127.0.0.1'/>
+
+  <!-- Network -->
+  <proxy v=':8080'/>
+
+  <!-- Remote Command Server -->
+  <command-allow-no-pass v='0.0.0.0'/>
+
+  <!-- Slot Control -->
+  <power v='full'/>
+
+  <!-- User Information -->
+  <user v='Gnomuz'/>
+  <team v='51'/>
+  <passkey v='acaf8d78a997c944acaf8d78a997c944'/>
+
+  <!-- Work Unit Control -->
+  <next-unit-percentage v='100'/>
+
+  <!-- Folding Slots -->
+  <slot id='0' type='CPU'>
+    <pause-on-start v='True'/>
+  </slot>
+</config>
