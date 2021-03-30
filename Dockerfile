@@ -6,7 +6,7 @@ ENV DI=detect
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
-# Install various libs
+# Install various libs and update all packages
 RUN apt-get update && apt-get install -y \ 
     bzip2 \
     ca-certificates \
@@ -22,13 +22,15 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/*  \
 && apt-get clean
 
-# Support for the latest NVIDA GPUS RTX3080/90s
-RUN wget https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.21_amd64.deb
-RUN dpkg -i fahclient_7.6.21_amd64.deb
-RUN rm -f fahclient_7.6.21_amd64.deb
+# Install fahclient 7.6.21
+RUN curl -fsSL \
+      https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.21_amd64.deb \
+      -o fahclient.deb
+RUN DEBIAN_FRONTEND=noninteractive dpkg --install --force-depends fahclient.deb
+RUN rm -f fahclient.deb
 
+# Download customized config.xml
 RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/config.xml -O /etc/fahclient/config.xml
 
 
-ENTRYPOINT ["/etc/init.d/FAHClient"]
-CMD ["start"]
+ENTRYPOINT ["/etc/init.d/FAHClient", "start"]
