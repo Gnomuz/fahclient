@@ -9,13 +9,13 @@
   <gpu v='true'/>  <!-- If true, attempt to autoconfigure GPUs -->
 
   <!-- HTTP Server -->
-  <allow v='127.0.0.1'/>
+  <allow v='0.0.0.0/0'/>
 
   <!-- Network -->
   <proxy v=':8080'/>
 
   <!-- Remote Command Server -->
-  <command-allow-no-pass v='0.0.0.0'/>
+  <command-allow-no-pass v='0.0.0.0/0'/>
 
   <!-- Slot Control -->
   <power v='full'/>
