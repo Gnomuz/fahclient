@@ -8,6 +8,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
 # Install various libs and update all packages
 RUN apt-get update && apt-get install -y \ 
+    curl \
     bzip2 \
     ca-certificates \
     kmod \
