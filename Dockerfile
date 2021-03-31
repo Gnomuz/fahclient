@@ -34,4 +34,5 @@ RUN rm -f fahclient.deb
 RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/config.xml -O /etc/fahclient/config.xml
 
 
-ENTRYPOINT ["/etc/init.d/FAHClient", "start"]
+ENTRYPOINT ["/usr/bin/FAHClient"]
+CMD ["--user=Anonymous", "--team=0", "--gpu=true"]
