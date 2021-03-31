@@ -34,7 +34,7 @@ RUN rm -f fahclient.deb
 # Download customized config.xml
 RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/config.xml -O /etc/fahclient/config.xml
 # Download startup script for vast.ai instances
-RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/fah_autorun.sh -O fah_autorun.sh
+RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/fah_autorun.sh -O /root/fah_autorun.sh
 
 #ENTRYPOINT ["/usr/bin/FAHClient"]
 #CMD ["--user=Anonymous", "--team=0", "--gpu=true"]
