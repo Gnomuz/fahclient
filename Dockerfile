@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     libjansson4 \
     tzdata \  
     wget \
+    xmlstarlet \
     htop \
     nano \
 && apt-get upgrade -y\
@@ -32,7 +33,8 @@ RUN rm -f fahclient.deb
 
 # Download customized config.xml
 RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/config.xml -O /etc/fahclient/config.xml
+# Download startup script for vast.ai instances
+RUN wget https://raw.githubusercontent.com/gnomuz/fahclient/master/fah_autorun.sh -O fah_autorun.sh
 
-
-ENTRYPOINT ["/usr/bin/FAHClient"]
-CMD ["--user=Anonymous", "--team=0", "--gpu=true"]
+#ENTRYPOINT ["/usr/bin/FAHClient"]
+#CMD ["--user=Anonymous", "--team=0", "--gpu=true"]
