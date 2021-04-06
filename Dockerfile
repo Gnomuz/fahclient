@@ -1,4 +1,4 @@
-FROM nvidia/opencl:devel-ubuntu16.04
+FROM nvidia/opencl:devel-ubuntu18.04
 
 
 # Detect GPU indexes automatically
