@@ -21,12 +21,3 @@ xmlstarlet ed -L -u "/config/power/@v" -v $f_power /etc/fahclient/config.xml
 xmlstarlet ed -L -u "/config/gpu/@v" -v true /etc/fahclient/config.xml
 
 /etc/init.d/FAHClient start
-#sleep 1
-#if [ $f_clientType = advanced ]; then
-#  echo "detected client-type=advanced" >> ~/on-start_variables.log
-#  /usr/bin/FAHClient --send-command 'options client-type=advanced'
-#  /usr/bin/FAHClient --send-command save
-#  /etc/init.d/FAHClient restart
-#else
-#  echo "client-type=advanced was not detected" >> ~/on-start_variables.log
-#fi
