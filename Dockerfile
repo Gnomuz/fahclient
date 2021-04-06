@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     kmod \
     procps \
-    libcurl3 \  
+    libcurl4 \  
     libjansson4 \
     tzdata \  
     wget \
