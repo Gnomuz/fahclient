@@ -25,7 +25,7 @@ RUN apt-get update \
       xmlstarlet \
       htop \
       nano \
-    && apt-get upgrade -y\
+    && apt-get upgrade -y \
     # point at lib mapped in by container runtime
     && mkdir -p /etc/OpenCL/vendors \
     && echo "libnvidia-opencl.so.1" > /etc/OpenCL/vendors/nvidia.icd \
@@ -41,7 +41,7 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive dpkg --install --force-depends fah.deb \
     # cleanup
     && rm -rf fah.deb \
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* \
     && apt-get clean
 
 # Download customized config.xml
