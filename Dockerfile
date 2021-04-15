@@ -1,7 +1,7 @@
 # Folding@home GPU Container
 
 # CUDA 11.0.3 minimum. Check vast.ai instance before renting !!!
-FROM nvidia/cuda:11.0.-base-ubuntu18.04
+FROM nvidia/cuda:11.0.3-base-ubuntu18.04
 LABEL description="Fork from Official Folding@home GPU Container for vast.ai instances"
 
 # Detect GPU indexes automatically
