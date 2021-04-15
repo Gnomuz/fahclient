@@ -1,6 +1,6 @@
 # Folding@home GPU Container
 
-# CUDA 9.2 is chosen to be compitable with all drivers v396+ and most vast.ai instances
+# CUDA 11.2 minimum. Check vast.ai instance before renting !!!
 FROM nvidia/cuda:11.2.2-base-ubuntu18.04
 LABEL description="Fork from Official Folding@home GPU Container for vast.ai instances"
 
