@@ -3,7 +3,7 @@
   <fold-anon v='true'/>
 
   <!-- Folding Slot Configuration -->
-  <cause v='COVID_19'/>
+  <cause v='any'/>
   <client-type v='advanced'/>
   <gpu v='true'/>  <!-- If true, attempt to autoconfigure GPUs -->
 
