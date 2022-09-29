@@ -1,7 +1,7 @@
 # Folding@home GPU Container
 
 # CUDA 9.2 is chosen for the default tag to be compatible with all drivers v396+ and most decent vast.ai instances
-FROM nvidia/cuda:9.2-base-ubuntu18.04
+FROM nvidia/cuda:9.2-base-ubuntu20.04
 LABEL description="Fork from Official Folding@home GPU Container for vast.ai instances"
 
 # Detect GPU indexes automatically
