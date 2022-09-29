@@ -3,8 +3,9 @@
   <fold-anon v='true'/>
 
   <!-- Folding Slot Configuration -->
-  <cause v='any'/>
-  <client-type v='advanced'/>
+  <cause v='ALZHEIMERS'/>
+  <extra-core-args v='-np 4'/>
+  <project-key v='168211238'/>
   <gpu v='true'/>  <!-- If true, attempt to autoconfigure GPUs -->
 
   <!-- HTTP Server -->
